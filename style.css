@@ -1,11 +1,12 @@
 @font-face {
   font-family: Outfit;
-  src: url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+  href:"https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 }
 
 body {
-  background-color: #000000;
+  background-color: 000000;
   font-family: "Outfit", sans-serif;
+  color: fafafa;
   max-width: 600px;
   margin: 0 auto;
 }
