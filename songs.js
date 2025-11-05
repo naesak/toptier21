@@ -327,16 +327,16 @@ var metadata = {
   Heathens: {
     album: "Single",
     trackNumber: "Single",
-    image: "img/heathens.png",
+    image: "img/heathens.jpg",
   },
   "The Craving (Single Version)": {
     album: "Single",
     trackNumber: "Single",
-    image: "img/craving.png",
+    image: "img/clancy.png",
   },
   "The Line": {
     album: "Single",
     trackNumber: "Single",
-    image: "img/line.png",
+    image: "img/line.jpg",
   },
 };
