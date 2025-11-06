@@ -1,3 +1,5 @@
+<script type="text/javascript" language="javascript" src="songs.js"></script>
+<script type="text/javascript" language="javascript" src="sorter.js"></script>
 
 <html>
   <head>
@@ -6,32 +8,20 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap") />
     <meta charset="utf-8" />
   </head>
 
-  <body text="#000000" link="#e097d9" vlink="#e097d9" alink="#79a2c9">
+  <body text="#fafafa" link="#e097d9" vlink="#e097d9" alink="#79a2c9">
     <div style="display: flex; justify-content: center">
-      <img
-        src="img/title.png"
-        width="300"
-        style="margin-top: 50; margin-right: 7"
-      />
-    </div>
-    <div style="display: flex; justify-content: center">
-      <h4 style="margin-top: 10">BIAS SORTER</h4>
+      <h2 style="margin-top: 10">TOP TIER TØP</h2>
     </div>
 
     <p class="instructions">
       <center>
+        Elegí la que más te gusta de las 2 opciones, no importa si por sonido, letra o cualquier otra subjetividad
         <br /><br />
-        Pick which song you like better in each battle to get an accurate sorted
-        list of all twenty one pilots songs
-        <br /><br />
-        Just for funsies your top ranked track from each album slot (along with
-        a single and 4 bonus tracks) will be compiled into a new album
-
-        <br /><br />
-        NOTE: hitting '=' frequently will negatively affect your results.
+        NOTA: cuanto más pongas que no podés elegir entre 2 canciones más aburrido va a ser tu ranking así que no lo uses mucho
         <br /><br />
       </center>
     </p>
@@ -40,7 +30,7 @@
       <b>
         VERSUS #1
         <br />
-        0% COMPI
+        0% COMPILADO
       </b>
     </div>
     <div style="display: flex; justify-content: center">
@@ -54,7 +44,7 @@
               style="
                 text-align: center;
                 padding: 5px;
-                max-width: 200px;
+                max-width: 150px;
                 word-wrap: break-word;
                 background-color: rgba(255, 255, 255, 0.3);
               "
@@ -67,7 +57,7 @@
                 text-align: center;
                 padding: 5px;
                 word-wrap: break-word;
-                width: 40px;
+                width: 150px;
                 background-color: rgba(255, 255, 255, 0.3);
               "
             >
@@ -79,7 +69,7 @@
               rowspan="2"
               style="
                 text-align: center;
-                max-width: 200px;
+                max-width: 150px;
                 background-color: rgba(255, 255, 255, 0.3);
               "
             ></td>
@@ -117,13 +107,12 @@
       </div>
       <div id="restartPrompt" style="display: none">
         <div>
-          <h3 style="text-align: center">seguro?</h3>
+          <h3 style="text-align: center">tas seguro?</h3>
           <div style="display: flex; justify-content: center">
-            <button onclick="ohOkNvm()">NONT</button>
+            <button onclick="ohOkNvm()">NONO FUE SIN QUERER</button>
           </div>
-          <br /><br />
           <div style="display: flex; justify-content: center">
-            <button onclick="restart()">Yeeee</button>
+            <button onclick="restart()">seeee</button>
           </div>
         </div>
       </div>
