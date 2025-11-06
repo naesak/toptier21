@@ -276,7 +276,7 @@ function createFakeAlbum() {
         trackNumber: trackNum,
         album: metadata[title].album,
       };
-    } else if (bonusTracks.length < 4) {
+    } else if (bonusTracks.length < 3) {
       bonusTracks.push(title);
     }
   }
@@ -287,11 +287,11 @@ function createFakeAlbum() {
     albumString += `Bonus Track ${i + 1}: ${bonusTracks[i]}\n`;
   }
   var table = `
-  <h3>Your New Personal Album</h3>
+  <h3>Album de favoritos</h3>
   <table style="width:450px; font-size:18px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse" align="center">
   <tr>
     <th>Track</th>
-    <th>Song</th>
+    <th>Canción</th>
   </tr>
   ${album["1"]}
   ${album["2"]}
@@ -321,29 +321,8 @@ function createFakeAlbum() {
     </tr>`;
   })}
   </table>
-  <button id="albumCopyText" style="margin-top: 10;" onclick="copyAlbumToClipboard()">Copy Text</button>
   `;
   document.getElementById("albumField").innerHTML = table;
-}
-
-function copyAlbumToClipboard() {
-  navigator.clipboard.writeText(albumString);
-  document.getElementById("albumCopyText").innerHTML = "Copied!";
-  document.getElementById("albumCopyText").disabled = true;
-  setTimeout(() => {
-    document.getElementById("albumCopyText").innerHTML = "Copy Text";
-    document.getElementById("albumCopyText").disabled = false;
-  }, 2000);
-}
-
-function copyRankedSongsToClipboard() {
-  navigator.clipboard.writeText(rankedSongsString);
-  document.getElementById("songsCopyText").innerHTML = "Copied!";
-  document.getElementById("songsCopyText").disabled = true;
-  setTimeout(() => {
-    document.getElementById("songsCopyText").innerHTML = "Copy Text";
-    document.getElementById("songsCopyText").disabled = false;
-  }, 2000);
 }
 
 function showResult() {
@@ -353,9 +332,9 @@ function showResult() {
   var str = "";
   var i;
   str +=
-    '<h3>All Songs Ranked</h3><table style="width:450px; font-size:18px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse" align="center">';
+    '<h3>Ranking de todas las canciones</h3><table style="width:450px; font-size:18px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse" align="center">';
   str +=
-    '<tr><td style="text-align:center;">Rank</td><td style="text-align:center;">Songs</td></tr>';
+    '<tr><td style="text-align:center;">Puesto</td><td style="text-align:center;">Canciones</td></tr>';
   for (i = 0; i < namMember.length; i++) {
     rankedSongsString += `${i + 1}. ${namMember[lstMember[0][i]]}\n`;
     str +=
@@ -377,7 +356,6 @@ function showResult() {
   }
   str += `
   </table>
-  <button id="songsCopyText" style="margin-top: 10;" onclick="copyRankedSongsToClipboard()">Copy Text</button>
   `;
   document.getElementById("resultField").innerHTML = str;
 }
@@ -385,11 +363,11 @@ function showResult() {
 function showImage(undo) {
   if (!undo) numQuestion++;
   var str0 =
-    "BATTLE #" +
+    "VERSUS #" +
     numQuestion +
     "<br>" +
     Math.floor((finishSize * 100) / totalSize) +
-    "% SORTED";
+    "% COMPILADO";
   var str1 = "" + toNameFace(lstMember[cmp1][head1]);
   var str2 = "" + toNameFace(lstMember[cmp2][head2]);
   var img1 = metadata[str1]?.image;
@@ -397,15 +375,15 @@ function showImage(undo) {
   const innerHtml1 = `
   <div>
     ${str1}
-    <br>
-    <img width="50" height="50" src="${img1}"/>
+    <br><br>
+    <img width="80" height="80" src="${img1}"/>
   </div>
   `;
   const innerHtml2 = `
   <div>
     ${str2}
-    <br>
-    <img width="50" height="50" src="${img2}"/>
+    <br><br>
+    <img width="80" height="80" src="${img2}"/>
   </div>
   `;
   document.getElementById("battleNumber").innerHTML = str0;
