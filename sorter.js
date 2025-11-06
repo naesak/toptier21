@@ -326,26 +326,6 @@ function createFakeAlbum() {
   document.getElementById("albumField").innerHTML = table;
 }
 
-function copyAlbumToClipboard() {
-  navigator.clipboard.writeText(albumString);
-  document.getElementById("albumCopyText").innerHTML = "Copied!";
-  document.getElementById("albumCopyText").disabled = true;
-  setTimeout(() => {
-    document.getElementById("albumCopyText").innerHTML = "Copy Text";
-    document.getElementById("albumCopyText").disabled = false;
-  }, 2000);
-}
-
-function copyRankedSongsToClipboard() {
-  navigator.clipboard.writeText(rankedSongsString);
-  document.getElementById("songsCopyText").innerHTML = "Copied!";
-  document.getElementById("songsCopyText").disabled = true;
-  setTimeout(() => {
-    document.getElementById("songsCopyText").innerHTML = "Copy Text";
-    document.getElementById("songsCopyText").disabled = false;
-  }, 2000);
-}
-
 function showResult() {
   createFakeAlbum();
   var ranking = 1;
@@ -377,7 +357,6 @@ function showResult() {
   }
   str += `
   </table>
-  <button id="songsCopyText" style="margin-top: 10;" onclick="copyRankedSongsToClipboard()">Copy Text</button>
   `;
   document.getElementById("resultField").innerHTML = str;
 }
