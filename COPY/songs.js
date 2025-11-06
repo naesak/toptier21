@@ -499,4 +499,19 @@ var metadata = {
     trackNumber: 13,
     image: "img/breach.png",
   },
+  Heathens: {
+    album: "Single",
+    trackNumber: "Single",
+    image: "img/heathens.jpg",
+  },
+  "The Craving (Single Version)": {
+    album: "Single",
+    trackNumber: "Single",
+    image: "img/clancy.png",
+  },
+  "The Line": {
+    album: "Single",
+    trackNumber: "Single",
+    image: "img/line.jpg",
+  },
 };
