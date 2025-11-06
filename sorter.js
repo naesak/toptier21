@@ -287,7 +287,7 @@ function createFakeAlbum() {
     albumString += `Bonus Track ${i + 1}: ${bonusTracks[i]}\n`;
   }
   var table = `
-  <h3>Album de favoritos</h3>
+  <h3>Album de favoritas</h3>
   <table style="width:450px; font-size:18px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse" align="center">
   <tr>
     <th>Track</th>
